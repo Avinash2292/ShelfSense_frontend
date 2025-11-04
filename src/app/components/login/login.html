@@ -1,22 +1,16 @@
-<!-- ✅ Splash Screen -->
+<!-- 🌟 Splash Screen -->
 <div *ngIf="showSplash" class="splash-screen">
   <img src="/splash.png" alt="Splash" class="splash-image" />
 </div>
 
-<!-- ✅ Floating Splash Image Layer -->
-<div class="floating-splash-layer" aria-hidden="true">
-  <img src="/splash.png" class="floating-splash" />
-</div>
+ 
 
-<!-- ✅ Main Login Container -->
-<div *ngIf="showLoginForm" [ngStyle]="gradientStyle" class="login-background">
-
-  <!-- ✅ Loading Overlay -->
+<!-- 🔐 Login Container -->
+<div *ngIf="showLoginForm" class="login-background">
   <div *ngIf="isLoadingOverlay" class="overlay">
     <div class="spinner-overlay"></div>
   </div>
 
-  <!-- ✅ Login Form -->
   <div class="login-form animate-login">
     <h4><i class="fas fa-sign-in-alt me-2 text-success"></i> Login to Your Account</h4>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
